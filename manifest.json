@@ -1,0 +1,44 @@
+﻿{
+  "manifest_version": 2,
+  "name": "SteamTradeBOT",
+  "description": "Bot for automatical trading in Steam",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "SteamTradeBOT.png",
+    "default_title": "SteamTradeBOT",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "16": "SteamTradeBOT.png",
+    "48": "SteamTradeBOT.png",
+    "128": "SteamTradeBOT.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "*://*/*",
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
+
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "https://steamcommunity.com/market/listings/*" ],
+      "js": [ "GetInformation.js" ],
+      "all_frames": true
+    },
+    {
+      "matches": [ "https://steamcommunity.com/market/" ],
+      "js": [ "DeleteTradeOffer.js" ],
+      "all_frames": true
+    }
+  ]
+}
