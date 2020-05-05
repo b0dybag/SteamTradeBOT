@@ -6,11 +6,13 @@ var href = window.location.href;
 var ItemInfo = { href: href, name: GetName(href), appid: GetAppId(href), count: 0, yprice: "", on: false, xoffer: XofferCheck()};
 
 function GetName(href) {
+    //href = href.substring(href.lastIndexOf("/") + 1);
+    //href = href.replace(/%20/g, " ");
+    //href = href.replace(/%28/g, "(");
+    //href = href.replace(/%29/g, ")");
+    //return href;
     href = href.substring(href.lastIndexOf("/") + 1);
-    href = href.replace(/%20/g, " ");
-    href = href.replace(/%28/g, "(");
-    href = href.replace(/%29/g, ")");
-    return href;
+    return decodeURI(href);
 };
 
 function GetAppId(href) {
@@ -225,15 +227,31 @@ function inFrameWorker() {
 }
 
 function CountFromString(str) {
+    str = "" + str;
     var number = "";
     for (var i = 0; i < str.length; i++) {
-        if ('0123456789'.indexOf(str[i]) !== -1) {
+        if ('0123456789.'.indexOf(str[i]) !== -1) {
             number += str[i];
         };
-
         if (str[i] == ",") {
             number += ".";
         };
     }
-    return number;
+    let isNumber = /^\d+\.?\d+$/.test(number);
+    if (isNumber) return number; else return '';
+}
+
+function getTaxes(price) {
+    price = CountFromString(price);
+    if (!price) return '';
+    let taxProcent = 0.1304;//3478;
+    if (price < 10)
+        taxProcent = 0.128;
+    var tax = parseFloat(price) * taxProcent;
+    return roundDown(tax, 2);
+}
+
+function roundDown(number, decimals) {
+    decimals = decimals || 0;
+    return (Math.floor(number * Math.pow(10, decimals)) / Math.pow(10, decimals));
 }

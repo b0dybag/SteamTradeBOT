@@ -265,7 +265,7 @@ function GetPageInfo() {
         if (this.readyState != 4) return;
 
         if (this.status != 200) {
-            // обработать ошибку
+            // handle error
             console.log('error: ' + (this.status ? this.statusText : 'request has failed'));
             return false;
         } else {
@@ -286,12 +286,12 @@ function GetPageInfo() {
     }
 }
 
-function CountFromString(str) {
-    var number = "";
-    for (var i = 0; i < str.length; i++) {
-        if ('0123456789'.indexOf(str[i]) !== -1) {
-            number += str[i];
-        };
-    }
-    return number;
-}
+//function CountFromString(str) {
+//    var number = "";
+//    for (var i = 0; i < str.length; i++) {
+//        if ('0123456789'.indexOf(str[i]) !== -1) {
+//            number += str[i];
+//        };
+//    }
+//    return number;
+//}

@@ -64,11 +64,15 @@ function RefreshInfo() {
 }
 
 function SenderName(sender) {
+    if (typeof (sender.url) === "undefined") return 'Unknown';
     switch (sender.url) {
-        case "chrome-extension://bphmfinpbepbcaipnkdnanopopkpmpkl/popup.html": return "Popup"; break;
-        case "https://vk.com/friends?section=out_requests": return "VK(out_requests)"; break;
-        default: return sender.url;
-    }
+        case "chrome-extension://bphmfinpbepbcaipnkdnanopopkpmpkl/popup.html":
+            return "Popup"; break;
+        case "chrome-extension://bphmfinpbepbcaipnkdnanopopkpmpkl/background.html":
+            return "Background"; break;
+        default:
+            return sender.url;
+    };
 }
 
 chrome.webRequest.onHeadersReceived.addListener(
