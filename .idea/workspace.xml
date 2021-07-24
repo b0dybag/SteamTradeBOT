@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a693b364-2277-4d8a-b437-fb1a42dda5d5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Downloads/STH_v2.2.6.5" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -32,17 +50,40 @@
       <option name="presentableId" value="Default" />
       <updated>1618142362820</updated>
       <workItem from="1618142364784" duration="49000" />
-      <workItem from="1618142477734" duration="605000" />
+      <workItem from="1618142477734" duration="13447000" />
+      <workItem from="1618217128016" duration="1326000" />
+      <workItem from="1618327817348" duration="4058000" />
+      <workItem from="1624310042168" duration="98000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="708" y="363" width="578" height="449" key="#Notifications" timestamp="1618143086643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="363" width="578" height="449" key="#Notifications/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618143086643" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1618336469677">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618336469677" />
+    <state x="655" y="177" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1618151742587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="177" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618151742587" />
   </component>
 </project>

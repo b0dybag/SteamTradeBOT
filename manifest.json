@@ -32,8 +32,13 @@
   "content_scripts": [
     {
       "matches": [ "https://steamcommunity.com/market/listings/*" ],
-      "js": [ "GetInformation.js" ],
-      "all_frames": true
+      "all_frames": true,
+      "js": [ "GetInformation.js" ]
+    },
+    {
+      "matches": [ "https://steamcommunity.com/market/listings/322330/SPEAR_ROSE" ],
+      "all_frames": true,
+      "js": [ "GetInformation.js" ]
     },
     {
       "matches": [ "https://steamcommunity.com/market/" ],

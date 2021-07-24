@@ -13,7 +13,7 @@ function MessageParse(message, sender, sendresposendResponse) {
         switch (message.text) {
 
             case "start":
-                console.log("Script has started");
+                console.log("Script has started1");
                 ScriptMainFunc();
                 continueScript = true;
                 //chrome.tabs.executeScript(null, { file: "main.js" });
@@ -49,6 +49,8 @@ function ScriptMainFunc() {
             if (item != "statusInfo" && AllStorage[item].on) names.push(item);
         }
         if (ScriptPosition >= names.length) ScriptPosition = 0;
+        console.log("ScriptMainFunc, ScriptPosition: " + ScriptPosition );
+        console.log(AllStorage);
         if (names.length !== 0) frame.src = AllStorage[names[ScriptPosition]].href;
         else console.log(AllStorage);
     });
@@ -66,7 +68,7 @@ function RefreshInfo() {
 function SenderName(sender) {
     if (typeof (sender.url) === "undefined") return 'Unknown';
     switch (sender.url) {
-        case "chrome-extension://bphmfinpbepbcaipnkdnanopopkpmpkl/popup.html":
+        case "chrome-extension://glffnjpbdfepflnnmcoglojclmdodogn/popup.html":
             return "Popup"; break;
         case "chrome-extension://bphmfinpbepbcaipnkdnanopopkpmpkl/background.html":
             return "Background"; break;
